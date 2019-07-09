@@ -10,7 +10,7 @@ The general idea was to run client and type any string based command like in rea
 ## Usage
 First use ```make -f Makefile.remoteBash``` command to build project.
 
-Next, you have to run server by ```sudo ./remoteBash_server```.
+Next, you have to run server by ```sudo break./remoteBash_server```.
 
 And you can call any command you want by ```sudo ./remoteBash_client localhost ["cat remoteBash.x"] ```.
 
@@ -18,7 +18,7 @@ Where first argument of execution is host and second is command which you want t
 If you dont provide second command program will execute in loop where u can provide multiple commands. To terminate the program simply hit Ctrl + C 
 
 ## Author
-Mateusz Byczkowski
+Wojciech Jaroński
 
 
 Acknowledgement for Stack-Overflow community :)
