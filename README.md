@@ -7,20 +7,17 @@ I am using C background function popen where I pass command from client.
 ## Usage
 First use ```make -f Makefile.remoteBash``` command to build project.
 
-Next, you have to run server by ```sudo break./remoteBash_server```.
+Next, you have to run server by ```sudo ./remoteBash_server```.  
 
-And you can call any command you want by ```sudo ./remoteBash_client localhost ["cat remoteBash.x"] ```.
-
-Where first argument of execution is host and second is command which you want to remotely execute (as string) which is optional.
-If you dont provide second command program will execute in loop where u can provide multiple commands. To terminate the program simply hit Ctrl + C 
+Client is running in 2 modes: 1 command executed(1) or endless loop (2)  
+1. ```sudo ./remoteBash_client localhost 'command' ```  
+2. ```sudo ./remoteBash_client localhost``` and then you in loop: ``` command_to_execute``` ex. ```ls``` or ```cat remote*.c```.  
+To end simply hit Ctrl + C.
 
 ## Problems
 RPC needs to be running in system.
-To check whether it is running execute ```rpcinfo```.
+To check whether it is running execute ```rpcinfo```.  
 On debian following packages needs to be installed: ```rpcbind nfs-common```
 
 ## Author
 Wojciech Jaroński
-
-
-Acknowledgement for Stack-Overflow community :)
